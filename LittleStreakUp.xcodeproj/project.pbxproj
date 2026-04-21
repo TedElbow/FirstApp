@@ -521,7 +521,7 @@
 				CODE_SIGN_ENTITLEMENTS = LittleStreakUp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_ASSET_PATHS = "\"Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 9C2WB6M3U5;
 				ENABLE_PREVIEWS = YES;
@@ -538,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DavidRoberts.LittleStreakUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -557,7 +557,7 @@
 				CODE_SIGN_ENTITLEMENTS = LittleStreakUp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_ASSET_PATHS = "\"Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 9C2WB6M3U5;
 				ENABLE_PREVIEWS = YES;
@@ -574,7 +574,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DavidRoberts.LittleStreakUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -654,7 +654,7 @@
 				CODE_SIGN_ENTITLEMENTS = LittleStreakUp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 23;
+				CURRENT_PROJECT_VERSION = 24;
 				DEVELOPMENT_ASSET_PATHS = "\"Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = 9C2WB6M3U5;
 				ENABLE_PREVIEWS = YES;
@@ -671,7 +671,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 5.0;
+				MARKETING_VERSION = 6.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DavidRoberts.LittleStreakUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
