@@ -37,7 +37,6 @@ enum AppDependencies {
         )
         let fetchConversionDataUseCase = FetchConversionDataUseCase(conversionDataRepository: conversionDataRepository)
         let atsHostRegistrar = AppTransportSecurityHostRegistrar()
-        let timerSessionStore = InMemoryTimerSessionStore()
         let initializeAppUseCase = InitializeAppUseCase(
             configuration: configuration,
             fetchConversionDataUseCase: fetchConversionDataUseCase,
@@ -63,7 +62,6 @@ enum AppDependencies {
             startupStateStore: startupStateStore,
             initializeAppUseCase: initializeAppUseCase,
             pushTokenProvider: pushTokenProvider,
-            timerSessionStore: timerSessionStore,
             logger: logger,
             logStorage: logStorage
         )
