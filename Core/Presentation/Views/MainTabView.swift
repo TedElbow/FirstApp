@@ -1,15 +1,21 @@
 import SwiftUI
 
-/// Main native shell placeholder. Extend with your tabs and content in the host app.
-/// Layout follows the same fullscreen discipline as IOS-RoosterVault (GeometryReader, explicit
-/// background frames, Spacer-based centering). Theme colors/gradients come from the design pass.
+/// Main native shell placeholder.
+/// Extend with your tabs and content in the host app.
+///
+/// Layout follows the same fullscreen discipline as IOS-RoosterVault
+/// (GeometryReader, explicit background frames, Spacer-based centering).
+/// Theme colors/gradients come from the design pass.
 struct MainTabView: View {
-    @Environment(\.dependencyContainer) private var dependencyContainer
-    @StateObject private var fallbackTimerSessionStore = InMemoryTimerSessionStore()
+    @StateObject private var habitsViewModel: HabitsViewModel
+
+    init() {
+        _habitsViewModel = StateObject(
+            wrappedValue: HabitsViewModel(store: UserDefaultsHabitStore())
+        )
+    }
 
     var body: some View {
-        let timerSessionStore = dependencyContainer?.timerSessionStore ?? fallbackTimerSessionStore
-
         GeometryReader { geometry in
             let w = geometry.size.width
             let h = geometry.size.height
@@ -21,18 +27,14 @@ struct MainTabView: View {
 
                 TabView {
                     NavigationStack {
-                        TimerScreen(
-                            viewModel: TimerViewModel(timerSessionStore: timerSessionStore)
-                        )
+                        TodayHabitsScreen(viewModel: habitsViewModel)
                     }
                     .tabItem {
-                        Label("Timer", systemImage: "timer")
+                        Label("Today", systemImage: "sun.max.fill")
                     }
 
                     NavigationStack {
-                        HistoryScreen(
-                            viewModel: HistoryViewModel(timerSessionStore: timerSessionStore)
-                        )
+                        HistoryHabitsScreen(viewModel: habitsViewModel)
                     }
                     .tabItem {
                         Label("History", systemImage: "clock.arrow.circlepath")
@@ -41,7 +43,14 @@ struct MainTabView: View {
                 .tint(GameThemePalette.chickenGoldenYellow)
                 .toolbarBackground(.visible, for: .tabBar)
                 .toolbarBackground(
-                    GameThemePalette.chickenSkyTop.opacity(0.92),
+                    LinearGradient(
+                        colors: [
+                            GameThemePalette.chickenSkyTop.opacity(0.95),
+                            GameThemePalette.chickenSkyBlue.opacity(0.86)
+                        ],
+                        startPoint: .top,
+                        endPoint: .bottom
+                    ),
                     for: .tabBar
                 )
                 .toolbarColorScheme(.dark, for: .tabBar)
